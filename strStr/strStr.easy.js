@@ -31,4 +31,24 @@ Constraints:
 haystack and needle consist of only lowercase English characters.
  */
 
-const strStr = function (haystack, needle) {};
+// console.log('hellow'.indexOf('lw'));
+
+const strStr = function (haystack, needle) {
+  if (!needle) return 0;
+  return haystack.indexOf(needle);
+};
+
+const strStr2 = function (haystack, needle) {
+  if (!needle) return 0;
+  let index = 0;
+  while (haystack.length >= needle.length) {
+    if (haystack.startsWith(needle)) return index;
+    index++;
+    haystack = haystack.slice(1);
+  }
+
+  return -1;
+};
+
+module.exports = strStr;
+module.exports = strStr2;

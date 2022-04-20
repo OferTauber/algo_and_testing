@@ -74,6 +74,4 @@ const romanToInt = function (s) {
   }, 0);
 };
 
-console.log(romanToInt('MCMXACIV'));
-
 module.exports = romanToInt;
