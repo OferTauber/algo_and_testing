@@ -1,4 +1,4 @@
 node_modules
 *.json
-package.json
-.html
+*package.json
+*.html
