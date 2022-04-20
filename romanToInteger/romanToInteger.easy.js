@@ -40,4 +40,40 @@ Output: 1994
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
  */
 
-const romanToInt = function (s) {};
+const romanToInt = function (s) {
+  const arr = s.split('');
+  const romanMap = new Map();
+
+  romanMap
+    .set('I', 1)
+    .set('i', -1)
+    .set('V', 5)
+    .set('X', 10)
+    .set('x', -10)
+    .set('L', 50)
+    .set('C', 100)
+    .set('c', -100)
+    .set('D', 500)
+    .set('M', 1000);
+
+  const mapArr = arr.map((element, index) => {
+    switch (element) {
+      case 'I':
+        if (arr[index + 1] === 'V' || arr[index + 1] === 'X') return 'i';
+      case 'X':
+        if (arr[index + 1] === 'L' || arr[index + 1] === 'C') return 'x';
+      case 'C':
+        if (arr[index + 1] === 'D' || arr[index + 1] === 'M') return 'c';
+      default:
+        return element;
+    }
+  });
+
+  return mapArr.reduce((acc, cur) => {
+    return acc + romanMap.get(cur);
+  }, 0);
+};
+
+console.log(romanToInt('MCMXACIV'));
+
+module.exports = romanToInt;

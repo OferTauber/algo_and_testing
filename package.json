@@ -1,14 +1,21 @@
 {
-  "name": "weekendproblams",
+  "name": "algo_and_testing",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Clone Repo Instructions",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OferTauber/algo_and_testing.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OferTauber/algo_and_testing/issues"
+  },
+  "homepage": "https://github.com/OferTauber/algo_and_testing#readme",
   "dependencies": {
     "jest": "^27.5.1"
   }
