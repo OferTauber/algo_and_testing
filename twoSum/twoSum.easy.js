@@ -1,3 +1,14 @@
+const twoSum = function (nums, target) {
+  for (let [index1, num1] of nums.entries()) {
+    const index2 = nums.findIndex((num2) => num1 + num2 === target);
+    if (index2 !== -1 && index2 !== index1) {
+      return [index1, index2];
+    }
+  }
+};
+
+module.exports = twoSum;
+
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -25,14 +36,3 @@ Example 3:
 Input: nums = [3,3], target = 6
 Output: [0,1]}
  */
-
-const twoSum = function (nums, target) {
-  for (let [index1, num1] of nums.entries()) {
-    const index2 = nums.findIndex((num2) => num1 + num2 === target);
-    if (index2 !== -1 && index2 !== index1) {
-      return [index1, index2];
-    }
-  }
-};
-
-module.exports = twoSum;

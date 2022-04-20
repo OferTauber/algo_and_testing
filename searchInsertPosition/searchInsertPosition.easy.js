@@ -1,3 +1,16 @@
+const searchInsert = function (nums, target) {
+  if (nums.length > 104 || target > 104 || target < -104) return undefined;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (target <= nums[i]) return i;
+  }
+
+  return nums.length;
+};
+
+searchInsert(searchInsert([1, 3, 5, 6], 2));
+module.exports = searchInsert;
+
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -30,15 +43,3 @@ Constraints:
 nums contains distinct values sorted in ascending order.
 -104 <= target <= 104
  */
-const searchInsert = function (nums, target) {
-  if (nums.length > 104 || target > 104 || target < -104) return undefined;
-
-  for (let i = 0; i < nums.length; i++) {
-    if (target <= nums[i]) return i;
-  }
-
-  return nums.length;
-};
-
-searchInsert(searchInsert([1, 3, 5, 6], 2));
-module.exports = searchInsert;

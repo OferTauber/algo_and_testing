@@ -1,3 +1,20 @@
+const isValid = function (s) {
+  const stuck = [];
+  const bracketsMap = new Map();
+  bracketsMap.set(')', '(').set(']', '[').set('}', '{');
+
+  for (let char of s) {
+    if (char.match(/\(|\[|\{/g)) {
+      stuck.push(char);
+    } else {
+      if (stuck.pop() !== bracketsMap.get(char)) return false;
+    }
+  }
+  return true;
+};
+
+module.exports = isValid;
+
 /**
  * @param {string} s
  * @return {boolean}
@@ -23,19 +40,3 @@ Example 3:
 Input: s = "(]"
 Output: false
  */
-const isValid = function (s) {
-  const stuck = [];
-  const bracketsMap = new Map();
-  bracketsMap.set(')', '(').set(']', '[').set('}', '{');
-
-  for (let char of s) {
-    if (char.match(/\(|\[|\{/g)) {
-      stuck.push(char);
-    } else {
-      if (stuck.pop() !== bracketsMap.get(char)) return false;
-    }
-  }
-  return true;
-};
-
-module.exports = isValid;

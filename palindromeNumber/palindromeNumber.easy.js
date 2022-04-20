@@ -1,3 +1,14 @@
+const palindromeNumber = function (x) {
+  const arr = (x + '').split('');
+  let j = arr.length - 1;
+  for (let i = 0; i <= j; i++, j--) {
+    if (arr[i] !== arr[j]) return false;
+  }
+  return true;
+};
+
+module.exports = palindromeNumber;
+
 /**
  * @param {number} x
  * @return {boolean}
@@ -25,14 +36,3 @@ Input: x = 10
 Output: false
 Explanation: Reads 01 from right to left. Therefore it is not a palindrome.} 
  */
-
-const palindromeNumber = function (x) {
-  const arr = (x + '').split('');
-  let j = arr.length - 1;
-  for (let i = 0; i <= j; i++, j--) {
-    if (arr[i] !== arr[j]) return false;
-  }
-  return true;
-};
-
-module.exports = palindromeNumber;

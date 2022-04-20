@@ -1,17 +1,8 @@
-# Algo And Testing
+# Algorithmic exercises in JavaScript
 
-## Clone Repo Instructions
+The repository includes a set of exercises on algorithmics (restoration of the "C" strStr function etc.), which I applied using JavaScript.
+In addition, the repository includes tests applied using jest.js
 
-- **git clone https://(address)**
-- after clone please **npm install** this will install all what that this project is need automatically
-- **Note:** for run the test you need to run the command **npm run test**
+## Tech Stack
 
-## Welcome We Happy To See You
-
-please in this repo you will find Algorithms that you will need to build functions from screech <br>
-each file hold the instructions of the algorithms and the testing
-
-### Testing
-
-- **Each example in the instructions is a Test**
-- **Each description in the instructions is what the Algo should be**
+JS, jest
