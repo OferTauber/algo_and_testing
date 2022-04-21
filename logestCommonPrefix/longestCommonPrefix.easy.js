@@ -1,4 +1,16 @@
 const longestCommonPrefix = function (strs) {
+  let theLongestCommonPrefix = strs[0];
+  while (
+    theLongestCommonPrefix &&
+    !strs.every((str) => str.startsWith(theLongestCommonPrefix))
+  ) {
+    theLongestCommonPrefix = theLongestCommonPrefix.slice(0, -1);
+  }
+
+  return theLongestCommonPrefix;
+};
+
+const longestCommonPrefix2 = function (strs) {
   // return 'fl';
   let charIndex = 0;
   while (true) {
@@ -13,6 +25,7 @@ const longestCommonPrefix = function (strs) {
 };
 
 module.exports = longestCommonPrefix;
+module.exports = longestCommonPrefix2;
 
 /**
  * @param {string[]} strs
